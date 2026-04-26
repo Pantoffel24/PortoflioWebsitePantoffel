@@ -1,0 +1,22 @@
+{
+  "name": "python-portfolio-server",
+  "version": "1.0.0",
+  "description": "Express server to execute Python scripts and serve plots",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "python",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}

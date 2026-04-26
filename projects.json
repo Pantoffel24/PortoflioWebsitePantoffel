@@ -1,0 +1,92 @@
+[
+  {
+    "id": "nummet-euler",
+    "title": "Euler Method - Kinematic Simulation",
+    "description": "Numerical integration using Euler's method to solve kinematic equations. Simulates motion with constant acceleration.",
+    "tags": ["Python", "Numerical Methods", "Physics", "Simulation"],
+    "folder": "PRACTICALS/NUMMET/python",
+    "mainFile": "euler.py",
+    "dataFiles": ["Euler_Derivation.pdf"]
+  },
+  {
+    "id": "nummet-temp",
+    "title": "Temperature Calculation",
+    "description": "Numerical methods applied to temperature-related physics problems.",
+    "tags": ["Python", "Numerical Methods", "Physics"],
+    "folder": "PRACTICALS/NUMMET/python",
+    "mainFile": "temp.py",
+    "dataFiles": []
+  },
+  {
+    "id": "mass-gc",
+    "title": "Mass-Globular Cluster Analysis",
+    "description": "Data analysis for globular cluster mass determination using astronomical data and CSV inputs.",
+    "tags": ["Python", "Astrophysics", "Data Analysis", "Pandas"],
+    "folder": "NPHY Practicals/Mass-GC/Data",
+    "mainFile": "MGC.py",
+    "dataFiles": ["MGCdata2.csv"]
+  },
+  {
+    "id": "mass-gc-king",
+    "title": "King Model Analysis",
+    "description": "Analysis of cluster dynamics using the King model for mass-radius relationship.",
+    "tags": ["Python", "Astrophysics", "Data Analysis"],
+    "folder": "NPHY Practicals/Mass-GC/Data",
+    "mainFile": "kingedited.py",
+    "dataFiles": []
+  },
+  {
+    "id": "kos-data",
+    "title": "Cosmic Ray Proton Intensity & Solar Magnetic Field",
+    "description": "Analysis of cosmic ray proton intensity and solar magnetic field data from 1977-2000. Visualizes correlation with modulation values.",
+    "tags": ["Python", "Seaborn", "Data Visualization", "Physics"],
+    "folder": "PRACTICALS/KOS",
+    "mainFile": "dataStuff.py",
+    "dataFiles": ["KosRayData.xlsx"]
+  },
+  {
+    "id": "kos-more",
+    "title": "Additional KOS Data Processing",
+    "description": "Extended data processing for cosmic ray observations.",
+    "tags": ["Python", "Data Analysis", "Pandas"],
+    "folder": "PRACTICALS/KOS",
+    "mainFile": "moreDataStuff.py",
+    "dataFiles": []
+  },
+  {
+    "id": "kos-extended",
+    "title": "Comprehensive KOS Analysis",
+    "description": "Further analysis and processing of KOS cosmic ray data.",
+    "tags": ["Python", "Data Analysis"],
+    "folder": "PRACTICALS/KOS",
+    "mainFile": "evenMoreData.py",
+    "dataFiles": []
+  },
+  {
+    "id": "hisparc",
+    "title": "HISPARC Detector Data Analysis",
+    "description": "High School Project on Cosmic Rays (HISPARC) detector data processing and analysis.",
+    "tags": ["Python", "Particle Physics", "Data Analysis"],
+    "folder": "NPHY Practicals/HISPARK/DataCode",
+    "mainFile": "hisparc.py",
+    "dataFiles": []
+  },
+  {
+    "id": "statflux",
+    "title": "Statistical Flux Analysis",
+    "description": "Statistical analysis of flux measurements with computational methods.",
+    "tags": ["Python", "Statistics", "Data Analysis"],
+    "folder": "PRACTICALS/STATFLUX_Results",
+    "mainFile": "statflux.py",
+    "dataFiles": []
+  },
+  {
+    "id": "statflux-assign",
+    "title": "Assignment 6 - Statistical Analysis",
+    "description": "Assignment work on statistical flux and computational analysis.",
+    "tags": ["Python", "Statistics"],
+    "folder": "PRACTICALS/STATFLUX_Results",
+    "mainFile": "assign6.py",
+    "dataFiles": []
+  }
+]
