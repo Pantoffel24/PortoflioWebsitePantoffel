@@ -1,173 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="theme-toggle-wrapper">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-          <span class="theme-icon">🌙</span>
-        </button>
-      </div>
-      
-      <div class="container header-container">
-        <div class="header-content">
-          <div class="header-text">
-            <p class="eyebrow">Welcome to my portfolio</p>
-            <h1 class="hero-title">
-              <span class="name-highlight">Christoffel Schoeman</span>
-            </h1>
-            <p class="hero-subtitle">Python Developer | Data Science Enthusiast | Physics & Astrophysics</p>
-            <p class="intro">Building robust Python applications with a focus on data analysis, numerical methods, and scientific computing. Explore my projects below.</p>
-            <div class="skill-badges">
-              <span class="skill-badge">Python</span>
-              <span class="skill-badge">Data Analysis</span>
-              <span class="skill-badge">Scientific Computing</span>
-              <span class="skill-badge">Astrophysics</span>
-            </div>
-          </div>
-          <div class="header-decoration">
-            <div class="floating-card card-1">
-              <div class="card-content">
-                <div class="card-icon">🐍</div>
-                <span>Python</span>
-              </div>
-            </div>
-            <div class="floating-card card-2">
-              <div class="card-content">
-                <div class="card-icon">📊</div>
-                <span>Data</span>
-              </div>
-            </div>
-            <div class="floating-card card-3">
-              <div class="card-content">
-                <div class="card-icon">🔬</div>
-                <span>Science</span>
-              </div>
-            </div>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics & Projects Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#undergraduate" class="nav-link">Undergraduate Physics</a></li>
+                <li><a href="#honours" class="nav-link">Honours Physics</a></li>
+                <li><a href="#ancillary" class="nav-link">Ancillary Projects</a></li>
+            </ul>
         </div>
-      </div>
-    </header>
+    </nav>
 
-    <main class="container">
-      <section class="section about">
-        <h2>About this portfolio</h2>
-        <p>This website is designed to highlight Python projects with concise descriptions, source code previews, and interactive live output examples.</p>
-      </section>
-
-      <section class="section projects">
-        <div class="section-header">
-          <h2>Featured Python Projects</h2>
-          <p>Click any project card to view its code and demo output.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Christoffel Andries Schoeman</h1>
+            <p class="subtitle">Physics Student & Developer</p>
+            <p class="description">Welcome to my portfolio. Explore my physics practicals, research projects, and ancillary work.</p>
         </div>
-
-        <div id="loading-spinner" class="loading-spinner">
-          <div class="spinner"></div>
-          <p>Loading projects...</p>
-        </div>
-
-        <div id="filter-container" class="filter-container" style="display: none;">
-          <div class="filter-header">
-            <h3>Filter by tag</h3>
-            <button id="clear-filters" class="button button-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Clear all</button>
-          </div>
-          <div id="tag-filters" class="tag-filters"></div>
-        </div>
-
-        <div id="project-list" class="project-grid"></div>
-      </section>
-
-      <section class="section preview">
-          <div class="preview-panel">
-            <div class="preview-header">
-              <div>
-                <p class="eyebrow">Current project</p>
-                <h3 id="preview-title">Loading projects...</h3>
-              </div>
-              <button id="copy-button" class="button button-secondary" disabled>Copy code</button>
-            </div>
-
-            <div class="preview-content">
-              <div class="code-container">
-                <pre id="code-block" class="code-block"><code class="language-python">Select a project to view its Python source code.</code></pre>
-              </div>
-              <div class="demo-output">
-                <h4>Project info & Output</h4>
-                <pre id="output-block">Loading projects...</pre>
-              </div>
-              <div id="plots-container" style="margin-top: 1rem;"></div>
-            </div>
-            </div>
-          </div>
-      </section>
-    </main>
-
-    <section id="upload-section" class="section upload-section" style="display: none;">
-      <div class="container">
-        <div class="section-header">
-          <h2>📤 Upload New Project</h2>
-          <p>Add your Python projects to the portfolio</p>
-        </div>
-
-        <div class="upload-form-container">
-          <form id="upload-form" class="upload-form">
-            <div class="form-group">
-              <label for="project-file">Python File *</label>
-              <div class="file-input-wrapper">
-                <input type="file" id="project-file" name="file" accept=".py" required />
-                <div class="file-input-label">
-                  <span class="upload-icon">📁</span>
-                  <span class="upload-text">Click to upload or drag and drop</span>
-                  <span class="file-info">Python files only (.py)</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="project-title">Project Title *</label>
-                <input type="text" id="project-title" name="title" placeholder="e.g., Data Analysis Tool" required />
-              </div>
-
-              <div class="form-group">
-                <label for="project-tags">Tags (comma-separated)</label>
-                <input type="text" id="project-tags" name="tags" placeholder="e.g., Python, Data Analysis, Pandas" />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="project-description">Description *</label>
-              <textarea id="project-description" name="description" placeholder="Describe what your project does..." rows="4" required></textarea>
-            </div>
-
-            <div class="upload-actions">
-              <button type="submit" class="button button-primary" id="upload-btn">Upload Project</button>
-              <button type="button" class="button button-secondary" id="cancel-upload-btn">Cancel</button>
-            </div>
-          </form>
-
-          <div id="upload-status" class="upload-status" style="display: none;">
-            <div id="status-spinner" class="spinner" style="display: none;"></div>
-            <p id="status-message"></p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>Built as a clean Python portfolio showcase. Replace these sample projects with your own scripts.</p>
-        <button id="toggle-upload" class="button button-secondary" style="margin-top: 1rem;">+ Add Project</button>
-      </div>
+    <!-- Undergraduate Physics Section -->
+    <section id="undergraduate" class="section">
+        <h2>Undergraduate Physics</h2>
+        <div class="projects-grid">
+            <!-- Projects will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Honours Physics Section -->
+    <section id="honours" class="section">
+        <h2>Honours Physics</h2>
+        <div class="projects-grid">
+            <!-- Projects will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Ancillary Projects Section -->
+    <section id="ancillary" class="section">
+        <h2>Ancillary Projects</h2>
+        <div class="projects-grid">
+            <!-- Projects will be loaded here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Physics Portfolio. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
